@@ -4,6 +4,8 @@
  */
 package dashboard2193;
 
+import Modelo.Conexion;
+
 /**
  *
  * @author Valentina Mejia
@@ -14,7 +16,8 @@ public class Dashboard2193 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Conexion conexion=new Conexion();
+        conexion.conectar();
     }
     
 }
