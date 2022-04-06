@@ -9,5 +9,6 @@ package Modelo;
  * @author Valentina Mejia
  */
 public class Rol {
-    
+    private String id_Rol;
+    private String nombre_Rol;
 }

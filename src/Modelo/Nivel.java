@@ -9,5 +9,6 @@ package Modelo;
  * @author Valentina Mejia
  */
 public class Nivel {
-    
+    private String id_Nivel;
+    private String nivel_Atencion;
 }

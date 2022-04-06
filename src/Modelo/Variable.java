@@ -9,5 +9,6 @@ package Modelo;
  * @author Valentina Mejia
  */
 public class Variable {
-    
+    private String id_Variable;
+    private String nombre_Variable;
 }

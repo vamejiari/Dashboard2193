@@ -9,5 +9,7 @@ package Modelo;
  * @author Valentina Mejia
  */
 public class Variable_Hospital {
-    
+    private String id_Hospital;
+    private String id_area;
+    private String id_Variable;
 }
