@@ -19,7 +19,9 @@ public class Area_Hospital {
     
     //Constructor con parametros
     public Area_Hospital(String id_Hospital, String id_Area, String id_Usuario){
-        
+        this.setId_Hospital(id_Hospital);
+        this.setId_Area(id_Area);
+        this.setId_Usuario(id_Usuario);
     }
     
     //-------*Metodos Get*-------
