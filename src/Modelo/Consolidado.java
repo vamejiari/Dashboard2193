@@ -10,13 +10,14 @@ package Modelo;
  */
 public class Consolidado {
     private String id_Consolidado;
-    private String periodo;
+    private String id_Periodo;
     private int poblacion_Pobre;
     private int no_Poss;
     private int subsidiado;
     private int contributivo;
     private int otros;
     private int total;
+    private String id_UVR;
     private float total_UVR;
     private String id_Hospital;
     private String id_Area;
@@ -27,17 +28,18 @@ public class Consolidado {
     }
     
     //Constructor con atributos
-    public Consolidado(String id_Consolidado,String periodo,int poblacion_Pobre,int no_Poss,int subsidiado,int contributivo,
-        int otros,int total, float total_UVR, String id_Hospital,String id_Area,String id_Variable){
+    public Consolidado(String id_Consolidado,String id_Periodo,int poblacion_Pobre,int no_Poss,int subsidiado,int contributivo,
+        int otros,int total, String id_UVR, float total_UVR, String id_Hospital,String id_Area,String id_Variable){
         
         this.setId_Consolidado(id_Consolidado);
-        this.setPeriodo(periodo);
+        this.setId_Periodo(id_Periodo);
         this.setPoblacion_Pobre(poblacion_Pobre);
         this.setNo_Poss(no_Poss);
         this.setSubsidiado(subsidiado);
         this.setContributivo(contributivo);
         this.setOtros(otros);
         this.setTotal(total);
+        this.setId_UVR(id_UVR);
         this.setTotal_UVR(total_UVR);
         this.setId_Hospital(id_Hospital);
         this.setId_Area(id_Area);
@@ -49,8 +51,8 @@ public class Consolidado {
         return id_Consolidado;
     }
     
-    public String getPeriodo(){
-        return periodo;
+    public String getId_Periodo(){
+        return id_Periodo;
     }
 
     public int getPoblacion_Pobre(){
@@ -76,6 +78,10 @@ public class Consolidado {
     public int getTotal(){
         return total;
     }
+
+    public String getId_UVR() {
+        return id_UVR;
+    }
     
     public float getTotal_UVR(){
         return total_UVR;
@@ -97,8 +103,8 @@ public class Consolidado {
         this.id_Consolidado=id_Consolidado;
     }
     
-    public void setPeriodo(String periodo){
-        this.periodo=periodo;
+    public void setId_Periodo(String id_Periodo){
+        this.id_Periodo=id_Periodo;
     }
     
     public void setPoblacion_Pobre(int poblacion_Pobre){
@@ -123,6 +129,10 @@ public class Consolidado {
 
     public void setTotal(int total) {
         this.total = total;
+    }
+
+    public void setId_UVR(String id_UVR) {
+        this.id_UVR = id_UVR;
     }
 
     public void setTotal_UVR(float total_UVR) {

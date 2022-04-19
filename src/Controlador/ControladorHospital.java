@@ -21,8 +21,8 @@ public class ControladorHospital {
             con.setString(2, hospital.getNit());
             con.setString(3, hospital.getCod_Habilitacion());
             con.setString(4, hospital.getNombre());
-            con.setString(5, hospital.getDepartamento());
-            con.setString(6, hospital.getMunicipio());
+            con.setString(5, hospital.getId_Departamento());
+            con.setString(6, hospital.getId_Municipio());
             con.setString(7, hospital.getId_Nivel());
             int cantidad=con.executeUpdate();
             agregado=(cantidad>0);

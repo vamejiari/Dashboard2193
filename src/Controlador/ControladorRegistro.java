@@ -14,7 +14,7 @@ public class ControladorRegistro {
         boolean agregado=false;
         Connection cx=conexion.conectar();
         try{
-            String consulta=("Insert into registro values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            String consulta=("Insert into registro values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             PreparedStatement con=cx.prepareStatement(consulta);
             con.setString(1, registro.getId_Registro());
             con.setInt(2, registro.getPoblacion_Pobre());
@@ -23,12 +23,13 @@ public class ControladorRegistro {
             con.setInt(5, registro.getContributivo());
             con.setInt(6, registro.getOtros());
             con.setInt(7, registro.getTotal());
-            con.setFloat(8, registro.getCalculo_UVR());
-            con.setString(9, registro.getAño());
-            con.setString(10, registro.getMes());
-            con.setString(11, registro.getId_Hospital());
-            con.setString(12, registro.getId_Area());
-            con.setString(13, registro.getId_Variable());
+            con.setString(8, registro.getId_UVR());
+            con.setFloat(9, registro.getCalculo_UVR());
+            con.setString(10, registro.getAño());
+            con.setString(11, registro.getMes());
+            con.setString(12, registro.getId_Hospital());
+            con.setString(13, registro.getId_Area());
+            con.setString(14, registro.getId_Variable());
             int cantidad=con.executeUpdate();
             agregado=(cantidad>0);
         }catch(Exception e){

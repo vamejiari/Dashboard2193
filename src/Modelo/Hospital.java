@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
 import java.awt.Image;
@@ -16,8 +12,8 @@ public class Hospital {
     private String nit;
     private String cod_Habilitacion;
     private String nombre;
-    private String departamento;
-    private String municipio;
+    private String id_Departamento;
+    private String id_Municipio;
     //private Image logo;
     private String id_Nivel;
     
@@ -26,15 +22,15 @@ public class Hospital {
     }
     
     //-------*Constructor con atributos*-------
-    public Hospital(String id_Hospital, String nit, String cod_Habilitacion, String nombre, String departamento, 
-        String municipio, String id_Nivel) {
+    public Hospital(String id_Hospital, String nit, String cod_Habilitacion, String nombre, String id_Departamento, 
+        String id_Municipio, String id_Nivel) {
         
         this.setId_Hospital(id_Hospital);
         this.setNit(nit);
         this.setCod_Habilitacion(cod_Habilitacion);
         this.setNombre(nombre);
-        this.setDepartamento(departamento);
-        this.setMunicipio(municipio);
+        this.setId_Departamento(id_Departamento);
+        this.setId_Municipio(id_Municipio);
         //this.setLogo(logo);
         this.setId_Nivel(id_Nivel);
     }
@@ -56,12 +52,12 @@ public class Hospital {
         return nombre;
     }
 
-    public String getDepartamento() {
-        return departamento;
+    public String getId_Departamento() {
+        return id_Departamento;
     }
 
-    public String getMunicipio() {
-        return municipio;
+    public String getId_Municipio() {
+        return id_Municipio;
     }
 
     /*public Image getLogo() {
@@ -89,12 +85,12 @@ public class Hospital {
         this.nombre = nombre;
     }
 
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
+    public void setId_Departamento(String id_departamento) {
+        this.id_Departamento = id_departamento;
     }
 
-    public void setMunicipio(String municipio) {
-        this.municipio = municipio;
+    public void setId_Municipio(String id_Municipio) {
+        this.id_Municipio = id_Municipio;
     }
 
     /*public void setLogo(Image logo) {

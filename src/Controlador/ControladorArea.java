@@ -1,10 +1,7 @@
 package Controlador;
 import Modelo.Area; //Instancia de la clase Area
 import Modelo.Conexion; //Instancia de la clase de conexion
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 /*
     En esta clase, se registraran los metodos usados para realizar operaciones a la base de datos a la entidad area
@@ -17,7 +14,7 @@ public class ControladorArea {
         boolean agregado=false; //Bandera de control y entrega
         Connection cx=conexion.conectar(); //Entrega y guarda la conexion a la base de datos
         try {
-            String consulta="insert into area values(?,?)"; //Consulta SQL
+            String consulta="INSERT INTO area VALUES(?,?)"; //Consulta SQL
             PreparedStatement con=cx.prepareStatement(consulta); //Objeto que se encarga de dirigir la consulta hacia la base de datos
             con.setString(1, area.getId_Area());
             con.setString(2, area.getNombre_Area());
@@ -32,6 +29,5 @@ public class ControladorArea {
         return agregado;
     }
     
-    //Metodo para listar y buscar todas las areas
-    
+        
 }

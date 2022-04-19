@@ -16,6 +16,7 @@ public class Registro {
     private int contributivo;
     private int otros;
     private int total;
+    private String id_UVR;
     private float calculo_UVR;
     private String mes;
     private String año;
@@ -29,7 +30,7 @@ public class Registro {
     
     //-------*Constructor con atributos*-------
     public Registro(String id_Registro, int poblacion_Pobre, int no_Poss, int subsidiado, int contributivo, int otros, int total,
-        float calculo_UVR, String mes, String año, String id_Hospital, String id_Area, String id_Variable) {
+        String id_UVR,float calculo_UVR, String mes, String año, String id_Hospital, String id_Area, String id_Variable) {
         
         this.setId_Registro(id_Registro);
         this.setPoblacion_Pobre(poblacion_Pobre);
@@ -38,6 +39,7 @@ public class Registro {
         this.setContributivo(contributivo);
         this.setOtros(otros);
         this.setTotal(total);
+        this.setId_UVR(id_UVR);
         this.setCalculo_UVR(calculo_UVR);
         this.setMes(mes);
         this.setAño(año);
@@ -73,6 +75,10 @@ public class Registro {
 
     public int getTotal() {
         return total;
+    }
+
+    public String getId_UVR() {
+        return id_UVR;
     }
 
     public float getCalculo_UVR() {
@@ -126,6 +132,10 @@ public class Registro {
 
     public void setTotal(int total) {
         this.total = total;
+    }
+
+    public void setId_UVR(String id_UVR) {
+        this.id_UVR = id_UVR;
     }
 
     public void setCalculo_UVR(float calculo_UVR) {

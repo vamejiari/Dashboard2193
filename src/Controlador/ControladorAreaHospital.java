@@ -1,10 +1,8 @@
 package Controlador;
 import Modelo.Conexion;
 import Modelo.Area_Hospital;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.PreparedStatement;
-
+import java.sql.*;
+import java.util.ArrayList;
 /*
     En esta clase, se registraran los metodos usados para realizar operaciones a la base de datos a la entidad Area Hospital
 */
@@ -15,7 +13,7 @@ public class ControladorAreaHospital {
         boolean agregado=false;
         Connection cx=conexion.conectar();
         try{
-            String consulta=("Insert into area_hospital values (?,?,?)");
+            String consulta=("INSERT INTO area_hospital VALUES (?,?,?)");
             PreparedStatement con=cx.prepareStatement(consulta);
             con.setString(1, areaHospital.getId_Hospital());
             con.setString(2, areaHospital.getId_Area());
@@ -30,4 +28,4 @@ public class ControladorAreaHospital {
         
         return agregado;
     }
-}
+  }
